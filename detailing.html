@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCare Excellence</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            line-height: 1.8;
+            color: #333;
+            background: #f9f9f9;
+        }
+        header {
+            background: #212529;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 2.2rem;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+        }
+        .services {
+            padding: 4rem 2rem;
+            background: #bda2a2a7;
+        }
+        .services h2 {
+            text-align: center;
+            color: #232c31;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            padding: 2rem;
+            background: #819cb7;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-card h3 {
+            color: #212529;
+            margin-bottom: 1rem;
+        }
+        .service-card p {
+            color: #281717;
+            margin-bottom: 1rem;
+        }
+        .service-card .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #33485e;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AutoCare Excellence</h1>
+    </header>
+    <section class="hero">
+        <div>
+            <h2>Protect Your Investment</h2>
+            <p>Experience world-class auto care and protection plans tailored to your needs. Drive with confidence today!</p>
+        </div>
+    </section>
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Standard Plan</h3>
+                <p>Reliable basic protection for essential components and roadside assistance.</p>
+                <span class="price">$199</span>
+            </div>
+            <div class="service-card">
+                <h3>Premium Plan</h3>
+                <p>Comprehensive protection including electrical systems and advanced coverage.</p>
+                <span class="price">$399</span>
+            </div>
+            <div class="service-card">
+                <h3>Elite Plan</h3>
+                <p>Ultimate protection with zero deductible, luxury benefits, and extended support.</p>
+                <span class="price">$599</span>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 AutoCare Excellence. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

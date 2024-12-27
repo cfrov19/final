@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Luxury Cars</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+       
+        .services-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: url('mechanic.png');
+        }
+        .services-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: bisque;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .service-card i {
+            font-size: 3rem;
+            color: #f39c12;
+            margin-bottom: 1rem;
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+        }
+        .learn-more-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background: #f39c12;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        .learn-more-button:hover {
+            background: #d87b05;
+        }
+        @media (max-width: 768px) {
+            .services-section h2 {
+                font-size: 2rem;
+            }
+        }
+
+/* Default (desktop) styles: Hide the nav toggle button */
+.nav-toggle {
+  display: none;
+}
+
+/* Show the nav toggle button (hamburger) only on mobile */
+@media (max-width: 768px) {
+  /* Show the hamburger menu icon */
+  .nav-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">LuxuryCars</div>
+        <div class="nav-toggle" id="navToggle">
+            <i class='bx bx-menu'></i>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html">Cars</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class='bx bx-wrench'></i>
+                <h3>Maintenance & Repairs</h3>
+                <p>Expert maintenance and repair services to keep your vehicle in perfect condition.</p>
+                <a href="maintenance.html" class="learn-more-button">Learn More</a>
+            </div>
+            <div class="service-card">
+                <i class='bx bx-paint'></i>
+                <h3>Custom Modifications</h3>
+                <p>Personalized modifications and upgrades to enhance your vehicle's performance and style.</p>
+                <a href="modifications.html" class="learn-more-button">Learn More</a>
+            </div>
+            <div class="service-card">
+                <i class='bx bx-shield'></i>
+                <h3>Premium Protection</h3>
+                <p>Comprehensive warranty and protection plans for your peace of mind.</p>
+                <a href="protection.html" class="learn-more-button">Learn More</a>
+            </div>
+            <div class="service-card">
+                <i class='bx bx-car'></i>
+                <h3>Detailing Services</h3>
+                <p>Professional detailing services to maintain your vehicle's pristine appearance.</p>
+                <a href="detailing.html" class="learn-more-button">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+});
+
+    </script>
+</body>
+</html>

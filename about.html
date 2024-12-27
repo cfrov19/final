@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Luxury Cars</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #007bff;
+    }
+
+    .nav-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 1.8rem;
+      color: #333;
+    }
+        .nav-toggle {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        .about-section {
+            padding: 3rem 2rem;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text p {
+            margin: 1rem 0;
+            line-height: 1.6;
+        }
+
+        .team-section, .testimonials-section {
+            padding: 3rem 2rem;
+        }
+
+        .team-section h2, .testimonials-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .team-member {
+            flex: 1 1 calc(33.333% - 1rem);
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member h4 {
+            margin-top: 1rem;
+        }
+
+        .testimonials {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            scroll-snap-type: x mandatory;
+        }
+
+        .testimonial {
+            flex: 0 0 300px;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            scroll-snap-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonials-section {
+    padding-left: 20px; /* Shifts the whole section to the right */
+}
+
+.testimonials {
+    display: flex;
+    justify-content: space-between; /* Ensures equal spacing between testimonials */
+}
+
+.testimonial {
+    width: 30%; /* Adjust width if necessary */
+}
+
+        .testimonial p {
+            margin: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color:   white; /* Changed the background color to green */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 0; /* Reduced padding to make it smaller */
+    font-size: 0.9rem; /* Adjust font size for clarity */
+    color: white; /* Ensures text color is readable */
+}
+
+.nav-links.show {
+    display: flex;
+}
+
+.nav-toggle {
+    display: block;
+}
+
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .team-member {
+                flex: 1 1 100%;
+            }
+
+            .testimonial {
+                flex: 0 0 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">LuxuryCars</div>
+        <div class="nav-toggle" id="navToggle">
+            <i class='bx bx-menu'></i>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html">Cars</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Welcome to LuxuryCars, where luxury meets performance. With years of experience in the automotive industry, we pride ourselves on delivering exceptional vehicles and services to our distinguished clients.</p>
+                    <p>Our commitment to excellence and attention to detail sets us apart in the luxury automotive market. We understand that choosing a luxury vehicle is more than just a purchase – it's an investment in quality, comfort, and style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <h4>John Doe</h4>
+                    <p>CEO & Founder</p>
+                </div>
+                <div class="team-member">
+                    <h4>Jane Smith</h4>
+                    <p>Marketing Head</p>
+                </div>
+                <div class="team-member">
+                    <h4>Emily Brown</h4>
+                    <p>Chief Engineer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"LuxuryCars offers an unparalleled experience. Their vehicles and customer service are top-notch!"</p>
+                    <h4>- Alex Johnson</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"I couldn't be happier with my new luxury car. The team was incredibly helpful throughout the process!"</p>
+                    <h4>- Maria Gonzalez</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"From start to finish, the experience was seamless. LuxuryCars truly understands luxury!"</p>
+                    <h4>- Michael Lee</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

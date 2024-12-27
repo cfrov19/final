@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Car Maintenance & Repairs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(26, 31, 44, 0.7), rgba(26, 31, 44, 0.7)), url('/luxury-car.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background: url('mechanic-working.png');
+        }
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease forwards;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease forwards 0.2s;
+        }
+        .services {
+            padding: 4rem 2rem;
+            background: #f5f5f5;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-card h3 {
+            color: #1A1F2C;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .info-section {
+            padding: 4rem 2rem;
+            background: white;
+        }
+        .info-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .info-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .info-card h3 {
+            color: #1A1F2C;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Maintenance & Repairs</h1>
+            <p>Excellence in luxury vehicle care and maintenance</p>
+        </div>
+    </div>
+    <section class="services">
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Routine Maintenance</h3>
+                <p>Regular service intervals to maintain peak performance and prevent potential issues. Our expert technicians ensure your luxury vehicle receives the care it deserves.</p>
+                <p><strong>Price: $200</strong></p>
+            </div>
+            <div class="service-card">
+                <h3>Diagnostic Services</h3>
+                <p>State-of-the-art diagnostic equipment to identify and resolve complex issues. We use the latest technology to keep your vehicle in perfect condition.</p>
+                <p><strong>Price: $150</strong></p>
+            </div>
+            <div class="service-card">
+                <h3>Performance Upgrades</h3>
+                <p>Custom performance enhancements and upgrades for optimal driving experience. Transform your luxury vehicle with our expert modifications.</p>
+                <p><strong>Price: $500</strong></p>
+            </div>
+        </div>
+    </section>
+    <section class="info-section">
+        <div class="info-container">
+            <div class="info-card">
+                <h3>Expert Technicians</h3>
+                <p>Our certified technicians undergo rigorous training and specialize in luxury vehicle maintenance. With years of experience, they provide unmatched service quality.</p>
+            </div>
+            <div class="info-card">
+                <h3>Genuine Parts</h3>
+                <p>We use only authentic, manufacturer-approved parts to ensure the highest quality and reliability. Your vehicle deserves nothing but the best.</p>
+            </div>
+            <div class="info-card">
+                <h3>Premium Service</h3>
+                <p>Experience luxury car maintenance at its finest. Our state-of-the-art facility and attention to detail ensure your vehicle receives premium care.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

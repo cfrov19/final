@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Protection Plans</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            color: #ffffff;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://automotivefilmprofessionals.com/wp-content/uploads/2021/01/Paint-Protection-2048x1152.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        .header {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .header h1 {
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+        }
+        .hero {
+            padding-top: 120px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .protection-plans {
+            padding: 4rem 2rem;
+            background: rgba(0, 0, 0, 0.75);
+        }
+        .plans-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+        .plan-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        .plan-card:hover {
+            transform: translateY(-5px);
+        }
+        .plan-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .plan-card p {
+            color: #e0e0e0;
+        }
+        .plan-card .price {
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+        .features {
+            padding: 4rem 2rem;
+        }
+        .features h2 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+        .features-list {
+            max-width: 800px;
+            margin: 0 auto;
+            list-style: none;
+        }
+        .features-list li {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .plans-grid {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Premium Protection</h1>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Your Vehicle Deserves The Best Protection</h2>
+            <p>Comprehensive warranty and protection plans designed to keep your vehicle running smoothly and maintain its value. Our premium protection packages offer complete peace of mind for your automotive investment.</p>
+        </div>
+    </section>
+    <section class="protection-plans">
+        <div class="plans-grid">
+            <div class="plan-card">
+                <h3>Basic Protection</h3>
+                <p>Essential coverage for your vehicle including powertrain protection, 24/7 roadside assistance, and basic maintenance coverage.</p>
+                <p class="price">$299</p>
+            </div>
+            <div class="plan-card">
+                <h3>Advanced Protection</h3>
+                <p>Comprehensive coverage including electrical systems, advanced electronics, climate control, and extended maintenance support.</p>
+                <p class="price">$499</p>
+            </div>
+            <div class="plan-card">
+                <h3>Ultimate Protection</h3>
+                <p>Complete bumper-to-bumper coverage with zero deductible, rental car benefits, and premium maintenance package.</p>
+                <p class="price">$799</p>
+            </div>
+        </div>
+    </section>
+    <section class="features">
+        <h2>Why Choose Our Protection Plans</h2>
+        <ul class="features-list">
+            <li>Nationwide coverage with authorized service centers</li>
+            <li>Transferable protection plans that enhance resale value</li>
+            <li>No hidden fees or complicated claim processes</li>
+            <li>24/7 customer support and roadside assistance</li>
+            <li>Flexible payment options to fit your budget</li>
+        </ul>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2024 Premium Protection Plans. All rights reserved.</p>
+    </footer>
+</body>
+</html>

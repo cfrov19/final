@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Vehicle Modifications</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #1A1F2C;
+            background: #F1F0FB;
+        }
+
+        .header {
+            background: #b55727;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .hero {
+            padding-top: 100px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            color: #b55727;
+            margin-bottom: 1.5rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .services {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid #E5DEFF;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: #b55727;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .service-card .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #b55727;
+        }
+
+        .benefits {
+            padding: 4rem 2rem;
+            background: #b08a77;
+        }
+
+        .benefits h2 {
+            text-align: center;
+            color: #1c130f;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+
+        .benefits-list {
+            max-width: 800px;
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        .benefits-list li {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .footer {
+            background: #1A1F2C;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Custom Modifications</h1>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Transform Your Vehicle</h2>
+            <p>Personalized modifications and upgrades to enhance your vehicle's performance and style. We specialize in creating unique, high-quality customizations that reflect your personality and elevate your driving experience.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Performance Upgrades</h3>
+                <p>Enhance your vehicle's power, handling, and efficiency with our professional performance modifications.</p>
+                <span class="price">$500</span>
+            </div>
+            <div class="service-card">
+                <h3>Exterior Styling</h3>
+                <p>Transform your vehicle's appearance with custom body kits, paint work, wraps, and aerodynamic enhancements.</p>
+                <span class="price">$800</span>
+            </div>
+            <div class="service-card">
+                <h3>Interior Customization</h3>
+                <p>Upgrade your vehicle's interior with premium materials, custom upholstery, and advanced entertainment systems.</p>
+                <span class="price">$700</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <h2>Why Choose Our Modifications</h2>
+        <ul class="benefits-list">
+            <li>Professional installation by certified technicians</li>
+            <li>High-quality parts and materials from trusted manufacturers</li>
+            <li>Customized solutions tailored to your specific needs</li>
+            <li>Comprehensive warranty on all modifications</li>
+            <li>Expert advice and consultation throughout the process</li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Custom Modifications. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Cars</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+<body>
+  
+    <nav class="navbar">
+        <div class="nav-brand">LuxuryCars</div>
+   
+        <div class="icon" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="cars.html">Cars</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Experience Luxury</h1>
+            <p>Discover our collection of premium vehicles</p>
+            <div class="hero-buttons">
+              <a href="cars.html" class="btn">Explore Cars</a>
+              <a href="contact.html" class="btn btn-outline">Contact Us</a>
+          </div>
+        </div>
+    </header>
+
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class='bx bx-trophy'></i>
+                    <h3>Quality Assurance</h3>
+                    <p>All our vehicles undergo rigorous inspections to ensure top quality.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-car'></i>
+                    <h3>Luxury Collection</h3>
+                    <p>Explore a wide range of premium vehicles from top brands.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-user'></i>
+                    <h3>Customer Satisfaction</h3>
+                    <p>We prioritize your needs and ensure a seamless buying experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>Customer Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"LuxuryCars provided me with the car of my dreams. Amazing service and quality!"</p>
+                    <h3>— John D.</h3>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The professionalism and care from the team were unmatched. Highly recommend!"</p>
+                    <h3>— Sarah K.</h3>
+                </div>
+                <div class="testimonial-card">
+                    <p>"A premium experience from start to finish. The car selection is incredible."</p>
+                    <h3>— Michael P.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+      <section class="call-to-action">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Schedule a Test Drive Today</h2>
+                <p>Get behind the wheel of your dream car and experience luxury firsthand.</p>
+                <a href="contact.html#schedule" class="btn btn-primary">Schedule a Test Drive</a>
+            </div>
+            <div class="cta-animation">
+                <div class="road"></div>
+                <img src="car-animation.png" alt="Animated Car" class="animated-car">
+            </div>
+        </div>
+    </section>
+    
+ 
+     <div class="location-container">
+        <h2>Select Location on Map</h2>
+        <div id="map"></div>
+        <form action="#" method="POST" class="location-form">
+            <div class="form-group">
+                <label for="pickup-location">Pickup Location:</label>
+                <div class="input-group">
+                    <input type="text" id="pickup-location" name="pickup-location" placeholder="Click on the map" readonly>
+                    <button type="button" id="remove-pickup" class="remove-btn" style="display:none;">X</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dropoff-location">Drop-off Location:</label>
+                <div class="input-group">
+                    <input type="text" id="dropoff-location" name="dropoff-location" placeholder="Click on the map" readonly>
+                    <button type="button" id="remove-dropoff" class="remove-btn" style="display:none;">X</button>
+                </div>
+                <div class="time-container">
+                    <div class="form-group">
+                        <label for="pickup-time">Pickup Time:</label>
+                        <input type="time" id="pickup-time" name="pickup-time" />
+                    </div>
+                    <div class="car-type">
+                    <label for="car-types">Car-Types:</label>
+                    <select name="cars" id="car-select">
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="sports">Sports</option>
+                    </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dropoff-time">Drop-off Time:</label>
+                        <input type="time" id="dropoff-time" name="dropoff-time" />
+                    </div>
+                </div>
+
+            </div>
+                    
+        </form>
+    
+        <div class="form-group">
+            <label for="search-input">Search Location:</label>
+            <div class="input-group">
+                <input type="text" id="search-input" placeholder="Search location...">
+                <button type="button" id="search-button">Search</button>
+            </div>
+        </div>
+        <button id="submit-button" type="button" class="btn btn-submit">Submit</button>
+        <button id="reset-form" type="button" class="btn btn-reset">Reset</button>
+
+    </div>
+    
+      
+    <div class="image-container">
+        <img src="rent.png" alt="Rent Image">
+      </div>
+
+        <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Luxury Cars. All rights reserved.</p>
+            <ul class="footer-links">
+               
+                <li><a href="services.html">Terms of Service</a></li>
+                <li><a href="con#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer> 
+    <!-- Footer Section -->
+    
+    <script>
+
+const map = L.map('map').setView([40.4093, 49.8671], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+let pickupMarker = null;
+let dropoffMarker = null;
+
+map.on('click', function (e) {
+    const { lat, lng } = e.latlng;
+
+    if (!pickupMarker) {
+        pickupMarker = L.marker([lat, lng]).addTo(map)
+            .bindPopup("Pickup Location").openPopup();
+        document.getElementById('pickup-location').value = `${lat.toFixed(5)}, ${lng.toFixed(5)}`;
+        document.getElementById('remove-pickup').style.display = 'inline-block';  
+    } else if (!dropoffMarker) {
+        dropoffMarker = L.marker([lat, lng]).addTo(map)
+            .bindPopup("Drop-off Location").openPopup();
+        document.getElementById('dropoff-location').value = `${lat.toFixed(5)}, ${lng.toFixed(5)}`;
+        document.getElementById('remove-dropoff').style.display = 'inline-block';  
+    }
+});
+
+document.getElementById('remove-pickup').addEventListener('click', function () {
+    if (pickupMarker) {
+        map.removeLayer(pickupMarker);
+        pickupMarker = null;
+        document.getElementById('pickup-location').value = '';
+        document.getElementById('remove-pickup').style.display = 'none';  
+    }
+});
+
+document.getElementById('remove-dropoff').addEventListener('click', function () {
+    if (dropoffMarker) {
+        map.removeLayer(dropoffMarker);
+        dropoffMarker = null;
+        document.getElementById('dropoff-location').value = '';
+        document.getElementById('remove-dropoff').style.display = 'none';  
+    }
+});
+
+document.getElementById('reset-form').addEventListener('click', function () {
+    if (pickupMarker) {
+        map.removeLayer(pickupMarker);
+        pickupMarker = null;
+        document.getElementById('pickup-location').value = '';
+        document.getElementById('remove-pickup').style.display = 'none';
+    }
+    if (dropoffMarker) {
+        map.removeLayer(dropoffMarker);
+        dropoffMarker = null;
+        document.getElementById('dropoff-location').value = '';
+        document.getElementById('remove-dropoff').style.display = 'none';
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const searchButton = document.getElementById('search-button');
+    const searchInput = document.getElementById('search-input');
+
+    searchButton.addEventListener('click', function () {
+        const query = searchInput.value.trim(); 
+        if (query) {
+            fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.length > 0) {
+                        const { lat, lon } = data[0]; 
+                        
+                        map.setView([lat, lon], 15);
+                        const searchMarker = L.marker([lat, lon]).addTo(map)
+                            .bindPopup(`Found: ${query}`).openPopup();
+
+                        
+                        setTimeout(() => {
+                            map.removeLayer(searchMarker);
+                        }, 5000);
+                    } else {
+                        alert('Location not found!'); 
+                    }
+                })
+                .catch(error => {
+                    console.error('Error searching location:', error);
+                    alert('An error occurred while searching for the location.');
+                });
+        } else {
+            alert('Please enter a location to search.'); 
+        }
+    });
+  
+});
+
+document.getElementById('submit-button').addEventListener('click', function() {
+            this.textContent = 'Submitted';
+            
+            setTimeout(() => {
+                window.location.href = 'cars.html';
+            }, 1000); 
+        });
+
+
+        function toggleNav() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show'); 
+        }
+        
+</script>
+</body>
+</html>
+
